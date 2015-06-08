@@ -1,0 +1,24 @@
+h1 {
+  font-size: $h1-font-size;
+}
+
+section {
+  padding-top: $section-padding-top;
+}
+
+.unstyled {
+  list-style: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  margin-right: .4em;
+  margin-left: .4em;
+}
+
+.button {
+  margin-bottom: 0;
+}

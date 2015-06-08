@@ -1,0 +1,3 @@
+#!/bin/bash
+# Launches jekyll in the dist folder
+jekyll serve --watch --baseurl ''

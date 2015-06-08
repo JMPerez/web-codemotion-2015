@@ -1,0 +1,23 @@
+<!-- First Section -->
+<section id="about" class="row">
+    <div class="columns">
+        <h2>{{ site[page.hl].aboutTitle }}</h2>
+        <p>{{ site[page.hl].aboutDesc }}
+        <ul>
+            {% for about in site[page.hl].aboutBlock %}
+            <li>  
+                <span>{{ about.title }}</span>
+                <p class="text-justify">{{ about.text }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+<section class="row">
+    <div class="large-8 columns large-offset-2">
+      <div class="flex-video widescreen">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cfN3sQ_omjM" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+</section>
+<!-- End First Section -->

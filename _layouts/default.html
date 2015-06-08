@@ -1,0 +1,45 @@
+---
+hl: en
+---
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+    {{ content }} 
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="./js/jquery-2.1.1.min.js"><\/script>')
+    </script>
+    <script src="./js/default.js"></script>
+
+    {% if site.placeCoordinates %}
+    <script>
+        if ($(window).width() > 767) {
+            document.write('<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"><\/script>')
+        } 
+    </script>
+    <script>
+        if ($(window).width() > 767) {
+            var googleMaps = true,
+                eventPlace = new google.maps.LatLng({{ site.placeCoordinates | replace:' ','' }}),
+                centerMap = new google.maps.LatLng({{ site.mapCenterCoordinates | replace:' ','' }}),
+                mobileCenterMap = new google.maps.LatLng({{ site.mobileCenterMapCoordinates | replace:' ','' }}),
+                icon = '{{ site.baseurl }}/img/map-marker.svg';
+        } else {
+           var staticGoogleMaps = true,
+            eventPlaceCoordinates = '{{ site.placeCoordinates | replace:' ','' }}',
+            centerMapCoordinates = '{{ site.mapCenterCoordinates | replace:' ','' }}',
+            mobileCenterMapCoordinates = '{{ site.mobileCenterMapCoordinates | replace:' ','' }}',
+            icon = '{{ site.baseurl | prepend: site.url }}/img/map-marker.png';
+        }
+    </script>
+    {% endif %}
+
+    <script src="./js/scripts.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+# Plugins
+gems:
+- jekyll-sitemap
+safe: true
+
+# Build Settings
+permalink: pretty
+exclude: ['/bin/', 'README.md', 'LICENSE.txt', 'CNAME', 'package.json', '/node_modules/', 'gulpfile.js', '.jshintrc', 'web-codemotion.sublime-project', 'web-codemotion.sublime-workspace', '/.git/', '.gitignore']
+
+# Site Settings
+
+# i18n
+en:
+  title: "Codemotion Spain - For the communities, by the communities"
+  description: "Codemotion is the event that gets all the IT communities in Spain together for two days."
+  mainTitle: "Codemotion Spain"
+  mainSubtitle: "Nov 27-28 2015"
+  getInContact: "Get in contact"
+  aboutTitle: "About us"
+  aboutDesc: "<p>We are the IT crowd, and we deserve a day to talk about our craft.</p><p>Computer Science is a motor of the economy: we control airports and hospitals, keep transactions and invoices flowing, and store passwords, documents and kitten pictures. Hell, we even did what we could for the banks.<p>We live in a sector that reinvents itself every six months, where it would be easy to just relax and stop chasing after the next new and shiny thing. Codemotion is this day in which we sit down to talk about all that we have in common, stepping aside everything that makes us different."
+  aboutBlock:
+    - title: "+1,900 Attendees"
+      icon: "icon-users"
+      text: "With more than 1,900 attendees, Codemotion Spain has been the biggest IT event in the country, ..."
+    - title: "+30 Communities"
+      icon: "icon-location"
+      text: "Codemotion is possible because of all the comminities behind giving their support and interest. ..."
+    - title: "+130 Talks & Workshops"
+      icon: "icon-cog-alt"
+      text: "We have lot of talks about the last changes in ..."
+  locationBlockTitle: "Location"
+  viewOnGoogleMaps: "View on Google Maps"
+  parkingAvailability: "The parking has a limited capacity, and there will be many of us. We recommend to take the public transport, which is surprisingly easy:"
+  checkGPS: '<b>THIS IS NOT THE SAME AS "CAMPUS DE MONCLOA".</b> Please double-check your GPS instructions.'
+  metroLigero: "L3 (direction Puerta de Boadilla, drop at MontePríncipe)"
+  CallForPapers: 'Call for papers'
+  CallForPapersDesc: "Do you want to share what makes you excited about technology? Enter our Call for Papers <b>open until June 30</b> and post your talk or workshop."
+  SendYourTalk: "Send your talk"
+  developedBy: '<span>Delevoped with</span><span class="icon-heart"></span><span>by</span>'
+
+
+email: "info@codemotion.es"
+baseurl: ""
+url: "codemotion.es"
+googleAnalyticsTrackingId: ""
+googleAnalyticsSiteUrl: ""
+
+# Head
+twitterAccount: "@codemotion_es"
+
+# Main Block
+mainImage: "codemotion.jpg"
+mainButtons:
+ - {link: "mailto:ccoloma@extrema-sistemas.com", i18n: "getInContact", class: "icon-mail"}
+
+
+# Location Block
+universityName: "Universidad San Pablo CEU"
+streetAddress: "Campus de Montepríncipe"
+addressLocality: "Boadilla del monte, Madrid"
+placeCoordinates: "40.399567, -3.837917,17"
+mapCenterCoordinates: "40.399567, -3.839917,17"
+mobileCenterMapCoordinates: "40.399567, -3.837917"
