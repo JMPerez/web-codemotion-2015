@@ -15,19 +15,16 @@ en:
   description: "Codemotion is the event that gets all the IT communities in Spain together for two days."
   mainTitle: "Codemotion Spain"
   mainSubtitle: "Nov 27-28 2015"
-  getInContact: "Get in contact"
+  SendYourTalk: "Send your proposal"
   aboutTitle: "About us"
-  aboutDesc: "<p>We are the IT crowd, and we deserve a day to talk about our craft.</p><p>Computer Science is a motor of the economy: we control airports and hospitals, keep transactions and invoices flowing, and store passwords, documents and kitten pictures. Hell, we even did what we could for the banks.<p>We live in a sector that reinvents itself every six months, where it would be easy to just relax and stop chasing after the next new and shiny thing. Codemotion is this day in which we sit down to talk about all that we have in common, stepping aside everything that makes us different."
+  aboutDesc: "<p>We are the IT crowd, and we deserve at least two days to talk about our craft.</p><p>Computer Science is a motor of the economy: we control airports and hospitals, keep transactions and invoices flowing, and store passwords, documents and kitten pictures. Hell, we even did what we could for the banks.<p>We live in a sector that reinvents itself every six months, where it would be easy to just relax and stop chasing after the next new and shiny thing. Codemotion is this day in which we sit down to talk about all that we have in common, stepping aside everything that makes us different."
   aboutBlock:
     - title: "+1,900 Attendees"
-      icon: "icon-users"
-      text: "With more than 1,900 attendees, Codemotion Spain has been the biggest IT event in the country, ..."
+      text: "With more than 1,900 attendees, Codemotion Spain has been the biggest IT event in the country."
     - title: "+30 Communities"
-      icon: "icon-location"
-      text: "Codemotion is possible because of all the comminities behind giving their support and interest. ..."
+      text: "Codemotion is possible because of all the comminities behind giving their support and interest."
     - title: "+130 Talks & Workshops"
-      icon: "icon-cog-alt"
-      text: "We have lot of talks about the last changes in ..."
+      text: "Quality is important to us. That is why we always select only the best talks and workshops. "
   locationBlockTitle: "Location"
   viewOnGoogleMaps: "View on Google Maps"
   parkingAvailability: "The parking has a limited capacity, and there will be many of us. We recommend to take the public transport, which is surprisingly easy:"
@@ -35,9 +32,43 @@ en:
   metroLigero: "L3 (direction Puerta de Boadilla, drop at MontePríncipe)"
   CallForPapers: 'Call for papers'
   CallForPapersDesc: "Do you want to share what makes you excited about technology? Enter our Call for Papers <b>open until June 30</b> and post your talk or workshop."
-  SendYourTalk: "Send your talk"
-  developedBy: '<span>Delevoped with</span><span class="icon-heart"></span><span>by</span>'
+  developedBy: '<span>Developed with</span><span class="icon-heart"></span><span>by</span>'
+  SponsorsTitle: 'Become a sponsor'
+  SponsorsDesc: 'Codemotion is the biggest tech conference in Spain and one of the most important in Europe, with a network of more than 30K developers. Take part as a sponsor in the event open to all languages, platforms and technologies.'
+  CommunitiesTitle: 'Communities'
+  CommunitiesDesc: 'This event would not be possible without our communities. They provide with the talks and content that make all this possible.'
+  AskForInvitation: 'Ask for an invitation'
+  ContactUs: 'Contact us'
 
+es:
+  title: "Codemotion Spain - For the communities, by the communities"
+  description: "Codemotion es el evento que junta a todas las comunidades de desarrolladores IT de España durante dos días."
+  mainTitle: "Codemotion Spain"
+  mainSubtitle: "Nov 27-28 2015"
+  SendYourTalk: "Envíanos tu charla"
+  aboutTitle: "Quiénes somos"
+  aboutDesc: "<p>Somos técnicos, y nos merecemos un día para hablar de lo nuestro.</p><p>La informática es el motor de la economía: controlamos aeropuertos y hospitales, hacemos que fluyan facturas y transacciones, y almacenamos contraseñas, documentos y fotos de gatitos. Hasta hicimos lo que pudimos por la banca.<p>Vivimos en un sector que se reinventa completamente cada seis meses, donde lo fácil sería relajarse y dejar de perseguir la siguiente cosa nueva y brillante. Codemotion es el día en que nos sentamos a hablar sobre todo lo que tenemos en común, dejando de lado lo que nos hace diferentes."
+  aboutBlock:
+    - title: "+1,900 Asistentes"
+      text: "Con más de 1,900 asistentes, Codemotion Spain se ha convertido en el evento de IT más grande del país."
+    - title: "+30 Comunidades"
+      text: "Codemotion es posible gracias a todas las comunidades que nos brindan su apoyo, tiempo e interés."
+    - title: "+130 Charlas & Workshops"
+      text: "La calidad es importante para nosotros. Ésta es la razón de que siempre seleccionemos las mejores charlas y workshops. "
+  locationBlockTitle: "Dónde"
+  viewOnGoogleMaps: "Ver en Google Maps"
+  parkingAvailability: "El parking tiene capacidad limitada, y seremos bastantes. Recomendamos usar el transporte público, que es sorprendentemente sencillo:"
+  checkGPS: '<b>ESTO NO ES LO MISMO QUE "CAMPUS DE MONCLOA".</b> Por favor, comprueba las instrucciones de tu GPS.'
+  metroLigero: "L3 (dirección Puerta de Boadilla, bajarse en MontePríncipe)"
+  CallForPapers: 'Call for papers'
+  CallForPapersDesc: "Tienes una tecnología que te apasiona y que quieres compartir? Participa en nuestro Call for Papers <b>abierto hasta el 30 de Junio</b> en las categorías de charla o workshop."
+  developedBy: '<span>Desarrollado con</span><span class="icon-heart"></span><span>por</span>'
+  SponsorsTitle: 'Conviértete en patrocinador'
+  SponsorsDesc: 'Codemotion es el mayor evento en España y uno de los más importantes de Europa, con una red de más de 30K desarrolladores. Toma parte como patrocinador en el evento abierto a todos los lenguajes, plataformas y tecnologías.'
+  CommunitiesTitle: 'Nuestras comunidades'
+  CommunitiesDesc: 'Este evento no sería posible sin la participación de nuestras comunidades. Ellas son las que producen el contenido que da sentido a todo esto.'
+  AskForInvitation: 'Solicita incluir tu comunidad'
+  ContactUs: 'Contáctanos'
 
 email: "info@codemotion.es"
 baseurl: ""
@@ -51,7 +82,8 @@ twitterAccount: "@codemotion_es"
 # Main Block
 mainImage: "codemotion.jpg"
 mainButtons:
- - {link: "mailto:ccoloma@extrema-sistemas.com", i18n: "getInContact", class: "icon-mail"}
+  - link: "mailto:ccoloma@extrema-sistemas.com"
+    i18n: "SendYourTalk"
 
 
 # Location Block

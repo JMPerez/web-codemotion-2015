@@ -5,6 +5,27 @@
   height: 100%;
   position: relative;
   padding-top: 15px;
+
+  &.small {
+    background-color: $black;
+    padding-top: 10px;
+    height: auto;
+    padding-bottom: 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    .top-bar-section {
+      position: absolute;
+      width: 100%;
+      top: 60px;
+      right: 0px;
+      .f-dropdown {
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+
   h1 {
     color: $top-section-color;
   }
@@ -20,7 +41,6 @@
 
   &.after-scroll {
     padding-top: 0;
-    transition: all .5s;
     .top-header {
       transition-property: all;
       transition-duration: .2s;

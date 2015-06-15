@@ -2,7 +2,7 @@ h1 {
   font-size: $h1-font-size;
 }
 
-section {
+section:not(.no-padding) {
   padding-top: $section-padding-top;
 }
 

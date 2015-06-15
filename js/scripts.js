@@ -4,13 +4,13 @@
 
         if ($(window).scrollTop() >= 100) {
             $('#top-section').addClass('after-scroll');
-            $('#top-header .logo').removeClass('logo-light').addClass('logo-dark');
+            $('#top-section .logo').removeClass('logo-light').addClass('logo-dark');
         }
 
         $(window).scroll(function() {
             var scroll = $(this).scrollTop();
             var header = $('#top-section');
-            var logo = $('#top-header .logo');
+            var logo = $('#top-section .logo');
 
             if (scroll >= 100) {
                 header.addClass('after-scroll');
