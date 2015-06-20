@@ -57,7 +57,7 @@ footer {
   display: block;
   width: 170px;
   height: 32px;
-  text-indent: -1000px;
+  text-indent: -100000px;
   overflow: hidden;
   background: url('/img/extrema.png') no-repeat 0 0;
   background-size: contain;
@@ -69,7 +69,8 @@ footer {
   width: 299px;
   background-size: contain;
   background-repeat: no-repeat;
-  text-indent: -1000px;
+  text-indent: -100000px;
+  overflow: hidden;
   display: inline-block;
   background-image: url('/img/logo_white.png');
 }
