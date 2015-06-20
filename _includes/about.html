@@ -3,14 +3,10 @@
     <div class="columns">
         <h2>{{ site[page.hl].aboutTitle }}</h2>
         <p>{{ site[page.hl].aboutDesc }}
-        <ul>
-            {% for about in site[page.hl].aboutBlock %}
-            <li>  
-                <span>{{ about.title }}</span>
-                <p class="text-justify">{{ about.text }}</p>
-            </li>
-            {% endfor %}
-        </ul>
+        {% for about in site[page.hl].aboutBlock %}
+            <h4>{{ about.title }}</h4>
+            <p class="text-justify">{{ about.text }}</p>
+        {% endfor %}
     </div>
 </section>
 <section class="row">
