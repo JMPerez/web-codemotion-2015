@@ -173,7 +173,7 @@ $align-class-breakpoints:
 
 // These will throw a deprecation warning if used within a media query.
 @mixin lead {
-  font-size: $paragraph-font-size + rem-calc(3.5);
+  font-size: $paragraph-font-size + rem-calc(3.8);
   line-height: 1.6;
 }
 

@@ -2,7 +2,7 @@
 <section id="about" class="row">
     <div class="columns">
         <h2>{{ site[page.hl].aboutTitle }}</h2>
-        <p>{{ site[page.hl].aboutDesc }}
+        {{ site[page.hl].aboutDesc }}
         {% for about in site[page.hl].aboutBlock %}
             <h4>{{ about.title }}</h4>
             <p class="text-justify">{{ about.text }}</p>
