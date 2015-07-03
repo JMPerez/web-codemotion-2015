@@ -39,6 +39,28 @@ en:
   CommunitiesDesc: 'This event would not be possible without our communities. They provide with the talks and content that make all this possible.'
   AskForInvitation: 'Ask for an invitation'
   ContactUs: 'Contact us'
+  codeOfConduct: 'Code of Conduct'
+  cocHeadingTitle: "Code of Conduct"
+  cocHeading: "All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following code of conduct. Organisers will enforce this code throughout the event. We are expecting cooperation from all participants to help ensuring a safe environment for everybody."
+  cocHelpTitle: "Help"
+  cocHelp: "You can find our contact details, info@codemotion.es, in all the emails we've sent. "
+  cocQuickTitle: "The Quick Version"
+  cocQuick: "Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, or religion (or lack thereof). We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organisers."
+  cocMainTitle: "The Less Quick Version"
+  cocMain: >
+           Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.
+           Participants asked to stop any harassing behavior are expected to comply immediately.
+           Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualised images, activities, or other material. Booth staff (including volunteers) should not use sexualised clothing/uniforms/costumes, or otherwise create a sexualised environment.
+           If a participant engages in harassing behavior, the conference organisers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.
+           If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff can be identified as they'll be wearing branded t-shirts.
+           Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
+           We expect participants to follow these rules at conference and workshop venues and conference-related social events.
+           
+  cocCredits: >
+              Original source and credit: <a href="http://2012.jsconf.us/#/about" target="_blank">http://2012.jsconf.us/#/about</a> &amp; <a href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy" target="_blank">The Ada Initiative</a><br>
+              Please help by translating or improving: <a href="https://github.com/leftlogic/confcodeofconduct.com" target="_blank">http://github.com/leftlogic/confcodeofconduct.com</a><br>
+              This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US" target="_blank">Creative Commons Attribution 3.0 Unported License</a>
+            
 
 es:
   title: "Codemotion Spain - For the communities, by the communities"
@@ -69,7 +91,28 @@ es:
   CommunitiesDesc: 'Este evento no sería posible sin la participación de nuestras comunidades. Ellas son las que producen el contenido que da sentido a todo esto.'
   AskForInvitation: 'Solicita incluir tu comunidad'
   ContactUs: 'Contáctanos'
-
+  codeOfConduct: 'Código de Conducta'
+  cocHeadingTitle: "Código de Conducta"
+  cocHeading: "Se requiere que todos los asistentes, ponentes, patrocinadores y voluntarios de nuestra conferencia acepten el siguiente código de conducta. Los organizadores harán cumplir este código a lo largo del evento. Esperamos la colaboración de todos los participantes para ayudar a asegurar un ambiente seguro para todos."
+  cocHelpTitle: "¿Necesitas Ayuda?"
+  cocHelp: "Tienes nuestros detalles de contacto, info@codemotion.es, en los correos electrónicos que hemos mandado."
+  cocQuickTitle: "La Versión Rápida"
+  cocQuick: "Nuestra conferencia se dedica a ofrecer una experiencia libre de abusos para todos, independientemente de su género, orientación sexual, discapacidad, apariencia física, talla, raza o religión. No toleramos abusos de los participantes de la conferencia en ninguna de sus formas. El lenguaje e imágenes sexuales no son apropiados para ninguna sala de la conferencia, incluyendo charlas, talleres, fiestas, Twitter y otros medios online. Los participantes de la conferencia que violen estas reglas pueden ser sancionados o expulsados de la misma sin reembolso a discreción de los organizadores."
+  cocMainTitle: "La Versión No Tan Rápida"
+  cocMain: >
+           Los abusos incluyen: comentarios ofensivos relativos a género, orientación sexual, discapacidad, apariencia física, talla, raza, religión, imágenes sexuales en espacios públicos, intimidación deliberada, acoso, persecución, fotografía o grabación de abusos, interrupciones continuadas de charlas u otros eventos, contacto físico inapropiado y atención sexual no deseada.
+           Se espera que los participantes instados a parar cualquier comportamiento abusivo obedezcan inmediatamente.
+           Los patrocinadores también están sujetos a la política contra abusos. En particular, los patrocinadores no deberían utilizar imágenes, actividades u otro material con contenido sexual. El personal de los puestos (voluntarios incluidos) no debería usar ropa/uniformes/disfraces sexualizados, o que de otra manera crean un ambiente sexualizado.
+           Si un participante incurre en un comportamiento abusivo, los organizadores de la conferencia pueden tomar cualquier acción que estimen oportuna, incluyendo advertencias al ofensor o su expulsión de la conferencia sin reembolso.
+           Si estás sufriendo algún abuso, adviertes abusos sobre otra persona, o tienes alguna otra preocupación, por favor contacta con algún miembro del personal de la conferencia inmediatamente. El personal de la conferencia puede ser fácilmente identificado, ya que vestirán camisetas del evento.
+           El personal de la conferencia estará contento de ayudar a los participates a contactar con la seguridad del hotel/sala o con las autoridades locales, proveer escolta o asistir de otra manera a aquellos que estén sufriendo abusos para que se sientan seguros mientras dure la conferencia. Valoramos tu asistencia.
+           Esperamos que los participantes sigan estas reglas en la la conferencia, talleres y eventos sociales relacionados con la conferencia.
+           
+  cocCredits: >
+              Fuente original y créditos: <a href="http://2012.jsconf.us/#/about" target="_blank">http://2012.jsconf.us/#/about</a> &amp; <a href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy" target="_blank">The Ada Initiative</a><br>
+              Por favor, ayuda traduciendo o mejorando: <a href="https://github.com/leftlogic/confcodeofconduct.com" target="_blank">http://github.com/leftlogic/confcodeofconduct.com</a><br>
+              Este trabajo está licenciado bajo <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US" target="_blank">Creative Commons Atribución 3.0 Unported License</a>
+               
 email: "info@codemotion.es"
 baseurl: ""
 url: "codemotion.es"
