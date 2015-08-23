@@ -16,6 +16,7 @@ en:
   mainTitle: "Codemotion Spain"
   mainSubtitle: "Nov 27-28 2015"
   SendYourTalk: "Send your proposal"
+  GetYourTickets: "Get your tickets"
   aboutTitle: "Be an agent of chaos"
   aboutDesc: "<p class='lead'>There must be a creation process. There must be change.</p><p>We, the IT crowd, recognize the need to reinvent our ways every year, learning new formulas to do old things. We don't relax believing that what was best practice last year will remain unchanged, unaffected by time. That's how Cobol was born. We don't do that.</p><p>We are agents of change. We recognize the need to destroy in order to build. We go, and get together, and learn. Then we get back to our places of work, and break things.</p><p>That's what we do.</p>"
   aboutBlock:
@@ -68,6 +69,7 @@ es:
   mainTitle: "Codemotion Spain"
   mainSubtitle: "Nov 27-28 2015"
   SendYourTalk: "Envíanos tu charla"
+  GetYourTickets: "Consigue tu entrada"
   aboutTitle: "Sé un agente del caos"
   aboutDesc: "<p class='lead'>Tiene que haber un proceso creativo. Tiene que haber cambio.</p><p>Nosotros, la comunidad de técnicos del software, reconocemos la necesidad de reinventarnos cada año, aprendiendo fórmulas nuevas para hacer las cosas de siempre. No nos relajamos pensando que lo que era buena práctica el año pasado seguirá sin cambios hoy, sin verse afectada por el paso del tiempo. Así es como nació Cobol. Nosotros no hacemos eso.</p><p>Nosotros somos agentes del cambio. Reconocemos la necesidad de destruir para construir después. Vamos, nos juntamos, y aprendemos juntos. Después volvemos a nuestros lugares de trabajo, y rompemos cosas.</p><p>Esto es lo que hacemos.</p>"
   aboutBlock:
@@ -125,8 +127,10 @@ twitterAccount: "@codemotion_es"
 # Main Block
 mainImage: "codemotion.jpg"
 mainButtons:
-  - link: "https://www.koliseo.com/codemotion/codemotion-madrid/r4p/5685252034920448"
-    i18n: "SendYourTalk"
+  - link: "https://www.koliseo.com/codemotion/codemotion-madrid"
+    i18n: "GetYourTickets"
+#  - link: "https://www.koliseo.com/codemotion/codemotion-madrid/r4p/5685252034920448"
+#    i18n: "SendYourTalk"
 
 
 # Location Block

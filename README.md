@@ -1,4 +1,4 @@
 # Single-page web template
 
-## Licence
-Project is published under the MIT licence
+## License
+This project is published under the MIT license
