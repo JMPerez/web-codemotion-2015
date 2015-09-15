@@ -6,3 +6,18 @@
   display: block;
   content: '}';
 }
+
+@import "_communities";
+
+.community {
+    display: inline-block !important;
+    overflow: hidden;
+    text-indent: -1000px;
+    white-space: nowrap;
+    opacity: .5;
+    margin: 0 10px 10px 0;
+}
+
+.community:hover, .community:focus {
+    opacity: 1;
+}

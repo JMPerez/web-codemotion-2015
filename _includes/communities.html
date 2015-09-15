@@ -1,13 +1,17 @@
 <section class="no-padding">
   <div class="row">
     <hr>
-    <div class="medium-6 columns">
+    <div class="columns">
       <h2>{{ site[page.hl].CommunitiesTitle }}</h2>
-      <p>{{ site[page.hl].CommunitiesDesc }} 
-      </p><p><a class="button button-lrg" href="https://groups.google.com/forum/#!forum/codemotion-madrid">{{ site[page.hl].AskForInvitation }}</a>
-    </p></div>
-    <div class="medium-6 columns show-for-medium-up">
-      <div class="brace"></div>
+      <p>
+        {{ site[page.hl].CommunitiesDesc }} 
+      </p>
+    </div>
+    <div class="columns">
+      {% include communities_logos.html %}
+      <p class="text-center">
+        <a class="button radius" href="https://groups.google.com/forum/#!forum/codemotion-madrid">{{ site[page.hl].AskForInvitation }}</a>
+      </p>
     </div>
   </div>
 </section>
