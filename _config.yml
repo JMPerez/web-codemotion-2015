@@ -34,14 +34,18 @@ en:
   CallForPapers: 'Call for papers'
   CallForPapersDesc: "Do you want to share what makes you excited about technology? Enter our Call for Papers <b>open until June 30</b> and post your talk or workshop."
   developedBy: '<span>Developed with</span><span class="icon-heart"></span><span>by</span>'
+  OurSponsorsTitle: 'Our sponsors'
+  OurSponsorsDesc: 'These are the companies that care about our developers.'
   SponsorsTitle: 'Become a sponsor'
   SponsorsDesc: 'Codemotion is the biggest tech conference in Spain and one of the most important in Europe, with a network of more than 30K developers. Take part as a sponsor in the event open to all languages, platforms and technologies.'
   CommunitiesTitle: 'Communities'
   CommunitiesDesc: 'This event would not be possible without our communities. They provide with the talks and content that make all this possible.'
-  AskForInvitation: 'Ask for an invitation'
+  AskForInvitation: 'Get in touch'
+  ReadMoreAboutThis: 'Read more about this'
   ContactUs: 'Contact us'
   codeOfConduct: 'Code of Conduct'
   cocHeadingTitle: "Code of Conduct"
+  cocIntro: "All attendees, speakers, sponsors and volunteers at our conference are required to agree with the code of conduct. Organisers will enforce this code throughout the event. We are expecting cooperation from all participants to help ensuring a safe environment for everybody."
   cocHeading: "All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following code of conduct. Organisers will enforce this code throughout the event. We are expecting cooperation from all participants to help ensuring a safe environment for everybody."
   cocHelpTitle: "Help"
   cocHelp: "You can find our contact details, info@codemotion.es, in all the emails we've sent. "
@@ -61,7 +65,8 @@ en:
               Original source and credit: <a href="http://2012.jsconf.us/#/about" target="_blank">http://2012.jsconf.us/#/about</a> &amp; <a href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy" target="_blank">The Ada Initiative</a><br>
               Please help by translating or improving: <a href="https://github.com/leftlogic/confcodeofconduct.com" target="_blank">http://github.com/leftlogic/confcodeofconduct.com</a><br>
               This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US" target="_blank">Creative Commons Attribution 3.0 Unported License</a>
-            
+  renfeDiscount: >
+                Renfe offers <a href="/docs/renfe_voucher_2015.pdf" target="_blank">a 30% discount to assist to Codemotion</a>. <b>This offer is valid for all trains</b> on all national travels, but cannot be combined with any other commercial offer (like return trips). <a href="http://www.renfe.com/viajeros/tarifas/eventos_tutorial.html" target="_blank">Here</a> you can read about how this works.
 
 es:
   title: "Codemotion Spain - For the communities, by the communities"
@@ -87,14 +92,18 @@ es:
   CallForPapers: 'Call for papers'
   CallForPapersDesc: "Tienes una tecnología que te apasiona y que quieres compartir? Participa en nuestro Call for Papers <b>abierto hasta el 30 de Junio</b> en las categorías de charla o workshop."
   developedBy: '<span>Desarrollado con</span><span class="icon-heart"></span><span>por</span>'
+  OurSponsorsTitle: 'Nuestros patrocinadores'
+  OurSponsorsDesc: 'Éstas son las empresas que se preocupan por nuestros desarrolladores'
   SponsorsTitle: 'Conviértete en patrocinador'
   SponsorsDesc: 'Codemotion es el mayor evento en España y uno de los más importantes de Europa, con una red de más de 30K desarrolladores. Toma parte como patrocinador en el evento abierto a todos los lenguajes, plataformas y tecnologías.'
   CommunitiesTitle: 'Nuestras comunidades'
   CommunitiesDesc: 'Este evento no sería posible sin la participación de nuestras comunidades. Ellas son las que producen el contenido que da sentido a todo esto.'
   AskForInvitation: 'Solicita incluir tu comunidad'
+  ReadMoreAboutThis: 'Leer más sobre esto'
   ContactUs: 'Contáctanos'
   codeOfConduct: 'Código de Conducta'
   cocHeadingTitle: "Código de Conducta"
+  cocIntro: "Se requiere que todos los asistentes, ponentes, patrocinadores y voluntarios de nuestra conferencia acepten el código de conducta. Los organizadores harán cumplir este código a lo largo del evento. Esperamos la colaboración de todos los participantes para ayudar a asegurar un ambiente seguro para todos."
   cocHeading: "Se requiere que todos los asistentes, ponentes, patrocinadores y voluntarios de nuestra conferencia acepten el siguiente código de conducta. Los organizadores harán cumplir este código a lo largo del evento. Esperamos la colaboración de todos los participantes para ayudar a asegurar un ambiente seguro para todos."
   cocHelpTitle: "¿Necesitas Ayuda?"
   cocHelp: "Tienes nuestros detalles de contacto, info@codemotion.es, en los correos electrónicos que hemos mandado."
@@ -114,6 +123,8 @@ es:
               Fuente original y créditos: <a href="http://2012.jsconf.us/#/about" target="_blank">http://2012.jsconf.us/#/about</a> &amp; <a href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy" target="_blank">The Ada Initiative</a><br>
               Por favor, ayuda traduciendo o mejorando: <a href="https://github.com/leftlogic/confcodeofconduct.com" target="_blank">http://github.com/leftlogic/confcodeofconduct.com</a><br>
               Este trabajo está licenciado bajo <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US" target="_blank">Creative Commons Atribución 3.0 Unported License</a>
+  renfeDiscount: >
+                Renfe ofrece <a href="/docs/renfe_voucher_2015.pdf" target="_blank">un descuento del 30% para viajar a Codemotion</a>. <b>La oferta es válida para todos los trenes</b> y todos los trayectos de recorrido nacional, para viajes de ida o ida y regreso, no siendo acumulables a otras ofertas comerciales. <a href="http://www.renfe.com/viajeros/tarifas/eventos_tutorial.html" target="_blank">Aquí podéis leer cómo funciona</a>.
                
 email: "info@codemotion.es"
 baseurl: ""

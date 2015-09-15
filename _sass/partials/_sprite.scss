@@ -1,0 +1,59 @@
+$Meteor-Spain: -0px -0px 64px 64px;
+$Betabeers: -0px -64px 244px 64px;
+$DotNetters-Zaragoza: -0px -128px 174px 64px;
+$GDGSpain: -0px -192px 125px 64px;
+$HTML5-Spain: -0px -256px 138px 64px;
+$HackathonLovers: -0px -320px 219px 64px;
+$IonicMadrid: -0px -384px 64px 64px;
+$Madriagil: -0px -448px 91px 64px;
+$Madrid-GUG-: -0px -512px 64px 64px;
+$Madrid-rb: -0px -576px 84px 64px;
+$MadridJS: -0px -640px 124px 64px;
+$MadridJUG: -0px -704px 66px 64px;
+$CatDotNet: -0px -768px 64px 64px;
+$Mozilla-Hispano: -0px -832px 200px 64px;
+$MsCoders-Madrid: -0px -896px 466px 64px;
+$NSCoder-Nights-Madrid: -0px -960px 70px 64px;
+$Node-js-Madrid: -0px -1024px 149px 64px;
+$Nuberos-Net: -0px -1088px 174px 64px;
+$PHPMad: -0px -1152px 64px 64px;
+$RiojaDotNet: -0px -1216px 75px 64px;
+$TechAndLadies: -0px -1280px 171px 64px;
+$Techdencias: -0px -1344px 97px 64px;
+$WPSUG: -0px -1408px 137px 64px;
+$dotnetMALAGA: -0px -1472px 63px 64px;
+$javaHispano: -0px -1536px 272px 64px;
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 3);
+}
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 4);
+}
+@function sprite-width($sprite) {
+  @return nth($sprite, 3);
+}
+@function sprite-height($sprite) {
+  @return nth($sprite, 4);
+}
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 1);
+  $sprite-offset-y: nth($sprite, 2);
+  background-position: $sprite-offset-x $sprite-offset-y;
+}
+@mixin sprite($sprite, $display: block) {
+  @include sprite-position($sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: $display;
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+.community {
+  background-image: url("/img/communities/communities.png");
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {.community {
+    background-image: url("/img/communities/communities@2x.png");
+    background-size: 466px 1600px;
+  }
+}

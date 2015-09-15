@@ -19,9 +19,14 @@
     "jshint-stylish": "~0.2.0"
   },
   "dependencies": {
-    "inkscape": "0.0.4",
+    "sprity": "^1.0.7",
+    "sprity-sass": "^1.0.4",
+    "gulp-if": "^1.2.1",
+    "google-spreadsheets": "^0.4.2",
+    "inkscape": "^0.0.4",
     "lodash": "^2.4.1",
     "gulp-uglifyjs": "^0.4.2",
-    "restler": "^3.2.2"
+    "restler": "^3.2.2",
+    "promise": "^7.0.4"
   }
 }

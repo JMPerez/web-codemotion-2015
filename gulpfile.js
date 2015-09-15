@@ -11,6 +11,8 @@ var sass    = require('gulp-sass');
 var csso    = require('gulp-csso');
 var browserify = require('gulp-browserify');
 var es      = require('event-stream');
+var sprity = require('sprity');
+var gulpif = require('gulp-if');
 
 gulp.task('clean', function () {
   // Clear the destination folder
@@ -48,6 +50,24 @@ gulp.task('scripts', function () {
 
 
   );
+});
+
+gulp.task('sprites', function () {
+  return sprity.src({
+      src: 'img/communities/gray/*.png',
+      name: 'communities',
+      style: '_sprite.scss',
+      cssPath: '/img/communities/',
+      processor: 'sass',
+      prefix: 'community',
+      'dimension': [{
+        ratio: 1, dpi: 72
+      }, {
+        ratio: 2, dpi: 192
+      }],
+    })
+    .pipe(gulpif('*.png', gulp.dest('./img/communities/')))
+    .pipe(gulpif('*.scss', gulp.dest('./_sass/partials/')));
 });
 
 gulp.task('watch', function () {
