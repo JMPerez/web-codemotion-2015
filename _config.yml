@@ -67,6 +67,8 @@ en:
               This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US" target="_blank">Creative Commons Attribution 3.0 Unported License</a>
   renfeDiscount: >
                 Renfe offers <a href="/docs/renfe_voucher_2015.pdf" target="_blank">a 30% discount to assist to Codemotion</a>. <b>This offer is valid for all trains</b> on all national travels, but cannot be combined with any other commercial offer (like return trips). <a href="http://www.renfe.com/viajeros/tarifas/eventos_tutorial.html" target="_blank">Here</a> you can read about how this works.
+  AgendaCallToActionTitle: 'Are you going to miss this?'
+  AgendaCallToActionDesc: 'Ask your boss to save two days to discover what everyone else is up to, get a bit crazy, and surely step out of your comfort zone.'
 
 es:
   title: "Codemotion Spain - For the communities, by the communities"
@@ -125,12 +127,18 @@ es:
               Este trabajo está licenciado bajo <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US" target="_blank">Creative Commons Atribución 3.0 Unported License</a>
   renfeDiscount: >
                 Renfe ofrece <a href="/docs/renfe_voucher_2015.pdf" target="_blank">un descuento del 30% para viajar a Codemotion</a>. <b>La oferta es válida para todos los trenes</b> y todos los trayectos de recorrido nacional, para viajes de ida o ida y regreso, no siendo acumulables a otras ofertas comerciales. <a href="http://www.renfe.com/viajeros/tarifas/eventos_tutorial.html" target="_blank">Aquí podéis leer cómo funciona</a>.
-               
+  AgendaCallToActionTitle: '¿Te lo vas a perder?'
+  AgendaCallToActionDesc: 'Pide a tu jefe dos días para descubrir en qué trabaja todo el mundo, volverte un poco loco, y seguramente salirte de tu zona de confort.'
+
+
 email: "info@codemotion.es"
 baseurl: ""
 url: "codemotion.es"
 googleAnalyticsTrackingId: ""
 googleAnalyticsSiteUrl: ""
+agendaUrl: "https://www.koliseo.com/codemotion/codemotion-madrid/r4p/5685252034920448/agenda"
+r4pUrl: "https://www.koliseo.com/codemotion/codemotion-madrid/r4p/5685252034920448"
+
 
 # Head
 twitterAccount: "@codemotion_es"
