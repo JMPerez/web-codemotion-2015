@@ -151,12 +151,12 @@ var AgendaDayTableModel = (function () {
     });
   }
 
+  // return the row label index according to the passed argument
+  // label.start
+  // label.end
+
   _createClass(AgendaDayTableModel, [{
     key: 'getRowLabelIndex',
-
-    // return the row label index according to the passed argument
-    // label.start
-    // label.end
     value: function getRowLabelIndex(label) {
       return this.rowLabels.indexOf((0, _lodashCollectionFind2['default'])(this.rowLabels, label));
     }
@@ -181,11 +181,11 @@ var AgendaDayTableModel = (function () {
     value: function isEmpty() {
       return this.colLabels.length === 0;
     }
-  }, {
-    key: 'findTalk',
 
     // find the first talk starting at row, col and moving in rowDelta, colDelta direction
     // ignores breaks and gaps in the calendar
+  }, {
+    key: 'findTalk',
     value: function findTalk(_ref6, _ref7) {
       var row = _ref6.row;
       var col = _ref6.col;
@@ -363,13 +363,15 @@ var _TalkDetailsRow = require('./TalkDetailsRow');
 */
 
 var AgendaView = (function () {
-  function AgendaView(_ref) {
+  function AgendaView(_ref) // contents of the agenda as JSON
+  // DOM node to render everything into
+  {
     var _this = this;
 
     var c4p = _ref.c4p;
-    var agenda = _ref.agenda;
-    var element // DOM node to render everything into
-    = _ref.element;
+    var // JSON for the C4P
+    agenda = _ref.agenda;
+    var element = _ref.element;
 
     _classCallCheck(this, AgendaView);
 
@@ -445,11 +447,11 @@ var AgendaView = (function () {
     value: function renderHint() {
       return '\n      <div class="hint">\n        <a href="http://koliseo.com" target="_blank"><img src="https://www.koliseo.com/css/img/logo.svg" alt="Powered by Koliseo" class="kagenda-logo"></a>\n        <p class="hint-p">Using a keyboard? Try using the cursors to move between talks</p>\n        <p class="hint-p small">Handcrafted with ♥ at 30,000 feet of altitude, some point between Madrid and Berlin</p>\n      </div>\n    ';
     }
-  }, {
-    key: 'selectDay',
 
     // Select a day from the agenda
     // dayId the identifier of this day. May include a hash
+  }, {
+    key: 'selectDay',
     value: function selectDay(dayId) {
       dayId = this.days.filter(function (day) {
         return day.id == dayId;
@@ -474,11 +476,11 @@ var AgendaView = (function () {
 
       this.pushState(dayTableModel.name, dayId);
     }
-  }, {
-    key: 'selectTalk',
 
     // render a talk as modal window, by hash
     // returns the talk if found, otherwise undefined
+  }, {
+    key: 'selectTalk',
     value: function selectTalk(hash, fadeInClass) {
       var talk = this.talksByHash[hash];
       if (talk) {
@@ -496,7 +498,7 @@ var AgendaView = (function () {
         $cellContent.classList.add('selected');
         this.selectedTalkHash = hash;
         this.selectedTalkCoords = tableModel.getCoords(talk.id);
-        $tr.insertAdjacentElement('afterEnd', new _TalkDetailsRow.TalkDetailsRow({
+        $tr.insertAdjacentHTML('afterEnd', new _TalkDetailsRow.TalkDetailsRow({
           talk: talk.contents,
           tagColors: this.tagColors
         }).render(tableModel.colLabels.length + 1));
@@ -510,10 +512,10 @@ var AgendaView = (function () {
     value: function getSelectedTableModel() {
       return this.models[this.selectedDayId];
     }
-  }, {
-    key: 'rowForDetails',
 
     // calculate the TR to insert a new row after. It depends on the value of rowspan
+  }, {
+    key: 'rowForDetails',
     value: function rowForDetails($td) {
       var rowSpan = parseInt($td.getAttribute('rowSpan') || '1');
       var $tr = $td.parentElement;
@@ -522,10 +524,10 @@ var AgendaView = (function () {
       }
       return $tr;
     }
-  }, {
-    key: 'hideOverlappingCells',
 
     // hide any cell with a rowSpan that would overlap with the details cell
+  }, {
+    key: 'hideOverlappingCells',
     value: function hideOverlappingCells($tr) {
       var distance = 1;
       while ($tr) {
@@ -538,10 +540,10 @@ var AgendaView = (function () {
         distance++;
       }
     }
-  }, {
-    key: 'pushState',
 
     // add the status to the location hash
+  }, {
+    key: 'pushState',
     value: function pushState(title, hash) {
       if (typeof history !== 'undefined' && history.pushState) {
         history.pushState({}, title, location.pathname + location.search + '#' + hash);
@@ -623,8 +625,6 @@ var AgendaView = (function () {
 ;
 
 exports.AgendaView = AgendaView;
-// JSON for the C4P
-// contents of the agenda as JSON
 
 },{"./AgendaDayTableModel":1,"./AgendaDayTemplate":2,"./TalkDetailsRow":4,"./util":7}],4:[function(require,module,exports){
 'use strict';
@@ -654,15 +654,7 @@ var TalkDetailsRow = (function () {
     key: 'render',
     value: function render(columns) {
       var talk = this.talk;
-      var $td = document.createElement('td');
-      $td.className = 'kagenda-talk-details-td';
-      $td.setAttribute('colspan', columns);
-      $td.innerHTML = '\n      <div class="kagenda-talk-details-td-inner">\n        <div class="kagenda-talk-details-contents">\n          <h2 class="kagenda-talk-details-title">' + talk.title + '</h2>\n          <div class="kagenda-talk-details-description">' + (0, _stringutils.formatMarkdown)(talk.description) + '</div>\n          ' + this.renderTags(talk.tags) + '\n        </div>\n        <ul class="kagenda-avatars">\n          ' + talk.authors.map(this.renderAuthor).join('') + '\n        </ul>\n      </div>\n    ';
-
-      var $tr = document.createElement('tr');
-      $tr.className = 'kagenda-talk-details';
-      $tr.appendChild($td);
-      return $tr;
+      return '\n      <tr class="kagenda-talk-details">\n        <td class="kagenda-talk-details-td" colspan="' + columns + '">\n          <div class="kagenda-talk-details-td-inner">\n            <div class="kagenda-talk-details-contents">\n              <h2 class="kagenda-talk-details-title">' + talk.title + '</h2>\n              <div class="kagenda-talk-details-description">' + (0, _stringutils.formatMarkdown)(talk.description) + '</div>\n              ' + this.renderTags(talk.tags) + '\n            </div>\n            <ul class="kagenda-avatars">\n              ' + talk.authors.map(this.renderAuthor).join('') + '\n            </ul>\n          </div>\n        </td>\n      </tr>\n    ';
     }
   }, {
     key: 'renderTags',
@@ -718,11 +710,13 @@ Koliseo.agenda = {};
   Renders an agenda.
 
 */
-Koliseo.agenda.render = function (_ref) {
+Koliseo.agenda.render = function (_ref) // {String} URL to retrieve the list of talks
+// {String} The element to use to render the agenda
+{
   var c4pUrl = _ref.c4pUrl;
-  var agendaUrl = _ref.agendaUrl;
-  var element // {String} The element to use to render the agenda
-  = _ref.element;
+  var // {String} URL to retrieve the C4P
+  agendaUrl = _ref.agendaUrl;
+  var element = _ref.element;
 
   // todo: add error handling
   // todo: add proper argument assertions
@@ -761,8 +755,6 @@ Koliseo.agenda.render = function (_ref) {
 };
 exports['default'] = Koliseo.agenda;
 module.exports = exports['default'];
-// {String} URL to retrieve the C4P
-// {String} URL to retrieve the list of talks
 
 },{"./AgendaView":3}],6:[function(require,module,exports){
 'use strict';
@@ -775,7 +767,7 @@ var entityMap = {
   '<': '&lt;',
   '>': '&gt;',
   '"': '&quot;',
-  '\'': '&#x27;'
+  "'": '&#x27;'
 },
     escapeRegEx = new RegExp('[' + Object.keys(entityMap).join('') + ']', 'g');
 
@@ -831,19 +823,19 @@ var entityMap = {
   "&": "&amp;",
   "<": "&lt;",
   ">": "&gt;",
-  "\"": "&quot;",
-  "'": "&#39;",
-  "/": "&#x2F;"
+  '"': '&quot;',
+  "'": '&#39;',
+  "/": '&#x2F;'
 };
 
 function transitionClassFunc() {
-  var _ref = arguments[0] === undefined ? {} : arguments[0];
+  var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
   var _ref$removeClass = _ref.removeClass;
   var removeClass = _ref$removeClass === undefined ? false : _ref$removeClass;
 
   return function (el) {
-    var className = arguments[1] === undefined ? "active" : arguments[1];
+    var className = arguments.length <= 1 || arguments[1] === undefined ? 'active' : arguments[1];
 
     if (removeClass) {
       if (!el.classList.contains(className)) return Promise.resolve();
@@ -854,15 +846,15 @@ function transitionClassFunc() {
     return new Promise(function (resolve) {
       var listener = function listener(event) {
         if (event.target != el) return;
-        el.removeEventListener("webkitTransitionEnd", listener);
-        el.removeEventListener("transitionend", listener);
+        el.removeEventListener('webkitTransitionEnd', listener);
+        el.removeEventListener('transitionend', listener);
         resolve();
       };
 
-      el.addEventListener("webkitTransitionEnd", listener);
-      el.addEventListener("transitionend", listener);
+      el.addEventListener('webkitTransitionEnd', listener);
+      el.addEventListener('transitionend', listener);
       requestAnimationFrame(function (_) {
-        el.classList[removeClass ? "remove" : "add"](className);
+        el.classList[removeClass ? 'remove' : 'add'](className);
       });
     });
   };
@@ -876,7 +868,7 @@ exports["default"] = {
 
   // transform a string into a single element
   strToEl: (function () {
-    var tmpEl = document.createElement("div");
+    var tmpEl = document.createElement('div');
     return function (str) {
       var r;
       tmpEl.innerHTML = str;
@@ -901,8 +893,8 @@ exports["default"] = {
 
     values = values.map(exports.escapeHtml);
     return strings.reduce(function (str, val, i) {
-      return str += val + (values[i] || "");
-    }, "");
+      return str += val + (values[i] || '');
+    }, '');
   },
 
   closest: function closest(el, selector) {
@@ -2246,7 +2238,7 @@ var objToString = objectProto.toString;
 function isFunction(value) {
   // The use of `Object#toString` avoids issues with the `typeof` operator
   // in older versions of Chrome and Safari which return 'function' for regexes
-  // and Safari 8 equivalents which return 'object' for typed array constructors.
+  // and Safari 8 which returns 'object' for typed array constructors.
   return isObject(value) && objToString.call(value) == funcTag;
 }
 
