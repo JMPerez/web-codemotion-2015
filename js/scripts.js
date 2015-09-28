@@ -74,7 +74,8 @@
     }
 
     //Google maps
-    if (googleMaps) {
+    var canvasMap = document.getElementById('canvas-map');
+    if (googleMaps && canvasMap) {
         var map;
         var markers = [];
         var MY_MAPTYPE_ID = 'custom_style';
@@ -137,7 +138,7 @@
                 mapOptions.center = mobileCenterMap;
             }
 
-            map = new google.maps.Map(document.getElementById('canvas-map'), mapOptions);
+            map = new google.maps.Map(canvasMap, mapOptions);
             var marker = new google.maps.Marker({
                 position: eventPlace,
                 animation: google.maps.Animation.DROP,
