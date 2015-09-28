@@ -1,0 +1,8 @@
+#!/bin/bash
+# Actualiza kagenda widget
+
+set -e
+
+rm -rf js/kagenda
+mkdir -p js/kagenda/1.0
+cp ../koliseo-agenda/build/*.{js,css} js/kagenda/1.0
