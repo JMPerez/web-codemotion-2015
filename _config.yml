@@ -69,6 +69,17 @@ en:
                 Renfe offers <a href="/docs/renfe_voucher_2015.pdf" target="_blank">a 30% discount to assist to Codemotion</a>. <b>This offer is valid for all trains</b> on all national travels, but cannot be combined with any other commercial offer (like return trips). <a href="http://www.renfe.com/viajeros/tarifas/eventos_tutorial.html" target="_blank">Here</a> you can read about how this works.
   AgendaCallToActionTitle: 'Are you going to miss this?'
   AgendaCallToActionDesc: 'Ask your boss to save two days to discover what everyone else is up to, get a bit crazy, and surely step out of your comfort zone.'
+  NHDiscount: >
+              <p>NH Ciudad de la Imagen Hotel offers our attendees a special price on 35 double and single rooms:
+              <ul><li>Double room (breakfast included) 63,00€ + 10% IVA per night</li>
+              <li>Single room (breakfast included) 54,00€ + 10% IVA per night</li></ul>
+              <p>Please call or send them an email indicating the reference number 7619617, or just CODEMOTION.
+              <p>These special prices will be available for the reservations made <b>until october, 21st.</b>
+              <p>NH Ciudad de la Imagen Hotel is very close to the venue, just 5 stops by Metro Ligero (ML3 line) from Montepríncipe station.
+              <p>Contacts and booking:
+              <br/>NH Ciudad de la Imagen
+              <br/>C/ Luis Buñuel 1, Ciudad de la Imagen | 28223 Pozuelo de Alarcón. Madrid | SPAIN 
+              <br/>T. <a href="tel:%2B34%2091%207110222">+34 91 7110222</a> | <a href="mailto:nhciudadimagen@nh-hotels.com">nhciudadimagen@nh-hotels.com</a> | <a href="www.nh-hotels.com" target="_blank">www.nh-hotels.com</a></p>
 
 es:
   title: "Codemotion Spain - For the communities, by the communities"
@@ -129,6 +140,17 @@ es:
                 Renfe ofrece <a href="/docs/renfe_voucher_2015.pdf" target="_blank">un descuento del 30% para viajar a Codemotion</a>. <b>La oferta es válida para todos los trenes</b> y todos los trayectos de recorrido nacional, para viajes de ida o ida y regreso, no siendo acumulables a otras ofertas comerciales. <a href="http://www.renfe.com/viajeros/tarifas/eventos_tutorial.html" target="_blank">Aquí podéis leer cómo funciona</a>.
   AgendaCallToActionTitle: '¿Te lo vas a perder?'
   AgendaCallToActionDesc: 'Pide a tu jefe dos días para descubrir en qué trabaja todo el mundo, volverte un poco loco, y seguramente salirte de tu zona de confort.'
+  NHDiscount: >
+              <p>El hotel NH Ciudad de la Imagen nos reserva unas 35 habitaciones entre dobles y singles a un precio reducido:
+              <ul><li>Hab. doble por noche con desayuno buffet incluido 63,00€ + 10% IVA</li>
+              <li>Hab. single por noche con desayuno buffet incluido 54,00€ + 10% IVA</li></ul>
+              <p>Los clientes tienen que llamar o enviar un email haciendo referencia al número 7619617, o bien indicando el nombre de CODEMOTION.
+              <p>Se pueden hacer reservas con estos precios <b>hasta el día 21 de octubre</b>.
+              <p>El hotel NH Ciudad de la Imagen queda muy cerca del recinto, a tan sólo 5 paradas de metro ligero (línea ML3).
+              <p>Contactos y reservas:
+              <br/>NH Ciudad de la Imagen
+              <br/>C/ Luis Buñuel 1, Ciudad de la Imagen | 28223 Pozuelo de Alarcón. Madrid | SPAIN 
+              <br/>T. <a href="tel:%2B34%2091%207110222">+34 91 7110222</a> | <a href="mailto:nhciudadimagen@nh-hotels.com">nhciudadimagen@nh-hotels.com</a> | <a href="www.nh-hotels.com" target="_blank">www.nh-hotels.com</a></p>
 
 
 email: "info@codemotion.es"
