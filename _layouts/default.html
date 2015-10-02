@@ -41,18 +41,6 @@ hl: en
 
     <script src="/js/scripts.min.js"></script>
 
-    {% if page.path contains 'agenda' %}
-        <script src="/js/kagenda/1.0/koliseo-agenda.js"></script>
-        <script>
-            if (typeof Koliseo !== 'undefined' && Koliseo.agenda && typeof fetch !== 'undefined') {
-                Koliseo.agenda.render({
-                    c4pUrl: '{{ site.r4pUrl }}',
-                    agendaUrl: '{{ site.agendaUrl }}',
-                    element: document.querySelector('.koliseo-agenda')
-                })
-            }
-        </script>
-    {% endif %}
 </body>
 
 </html>

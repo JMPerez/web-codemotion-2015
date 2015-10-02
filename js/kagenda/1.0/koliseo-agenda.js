@@ -151,12 +151,12 @@ var AgendaDayTableModel = (function () {
     });
   }
 
-  // return the row label index according to the passed argument
-  // label.start
-  // label.end
-
   _createClass(AgendaDayTableModel, [{
     key: 'getRowLabelIndex',
+
+    // return the row label index according to the passed argument
+    // label.start
+    // label.end
     value: function getRowLabelIndex(label) {
       return this.rowLabels.indexOf((0, _lodashCollectionFind2['default'])(this.rowLabels, label));
     }
@@ -181,11 +181,11 @@ var AgendaDayTableModel = (function () {
     value: function isEmpty() {
       return this.colLabels.length === 0;
     }
+  }, {
+    key: 'findTalk',
 
     // find the first talk starting at row, col and moving in rowDelta, colDelta direction
     // ignores breaks and gaps in the calendar
-  }, {
-    key: 'findTalk',
     value: function findTalk(_ref6, _ref7) {
       var row = _ref6.row;
       var col = _ref6.col;
@@ -257,7 +257,7 @@ var AgendaDayTemplate = (function () {
     key: 'render',
     value: function render() {
       var model = this.model;
-      return this.model.isEmpty() ? '<h3>Nothing to see here</h3><p>There are no entries scheduled for this day.</p>' : '\n      <table class="kagenda-table">\n      <thead class="kagenda-head"><tr>' + this.renderColLabels() + '</tr></thead>\n      <tbody>' + this.renderBody() + '</tbody>\n      </table>\n      ';
+      return this.model.isEmpty() ? '<h3>Nothing to see here</h3><p>There are no entries scheduled for this day.</p>' : '\n      <table class="ka-table">\n      <thead class="ka-head"><tr>' + this.renderColLabels() + '</tr></thead>\n      <tbody>' + this.renderBody() + '</tbody>\n      </table>\n      ';
     }
   }, {
     key: 'renderColLabels',
@@ -265,7 +265,7 @@ var AgendaDayTemplate = (function () {
       var labels = [''].concat(this.model.colLabels);
       return labels.map(function (label, index) {
         var trackId = ''; //this.model.tracks[index - 1].id;
-        return '<th class="kagenda-table-th" data-track-id="' + trackId + '">' + label + '</th>';
+        return '<th class="ka-table-th" data-track-id="' + trackId + '">' + label + '</th>';
       }).join('');
     }
   }, {
@@ -280,7 +280,7 @@ var AgendaDayTemplate = (function () {
 
         var row = _this.model.data[rowIndex];
         // TODO render time metadata. Hell, render all scema metadata, right?
-        return '\n          <tr class="kagenda-table-tr">\n          <td class="kagenda-table-th">' + start + '-' + end + '</td>\n          ' + (!row ? '' : row.map(function (cell) {
+        return '\n          <tr class="ka-table-tr">\n          <td class="ka-table-th">' + start + '-' + end + '</td>\n          ' + (!row ? '' : row.map(function (cell) {
           return !cell ? '' : _this.renderCell(cell);
         }).join('')) + '\n          </tr>\n          ';
       }).join('');
@@ -299,7 +299,7 @@ var AgendaDayTemplate = (function () {
         return track.id == contents.trackId;
       }).name + '</b>' : 'Empty slot';
 
-      return type === 'EXTEND' && contents.merged ? '' : ' <td class="kagenda-table-td ' + (type && type.toLowerCase() || '') + '" rowspan="' + rowSpan + '" colspan="' + colSpan + '"> ' + $contents + ' </td> ';
+      return type === 'EXTEND' && contents.merged ? '' : ' <td class="ka-table-td ' + (type && type.toLowerCase() || '') + '" rowspan="' + rowSpan + '" colspan="' + colSpan + '"> ' + $contents + ' </td> ';
     }
   }, {
     key: 'renderTalk',
@@ -313,7 +313,7 @@ var AgendaDayTemplate = (function () {
       var authors = _ref3.authors;
       var tags = _ref3.tags;
 
-      return '\n      <p><a href="#' + hash + '" data-id="' + id + '" data-hash="' + hash + '" class="kagenda-talk-title">' + title + '</a></p>\n      <p class="kagenda-author-brief">' + authors.map(function (a) {
+      return '\n      <p><a href="#' + hash + '" data-id="' + id + '" data-hash="' + hash + '" class="ka-talk-title">' + title + '</a></p>\n      <p class="ka-author-brief">' + authors.map(function (a) {
         return _this2.renderAuthor(a);
       }).join(', ') + '</p>\n      ';
     }
@@ -354,7 +354,7 @@ var _AgendaDayTableModel = require('./AgendaDayTableModel');
 
 var _util = require('./util');
 
-var _TalkDetailsRow = require('./TalkDetailsRow');
+var _TalkDetailsPopup = require('./TalkDetailsPopup');
 
 /**
 
@@ -363,15 +363,13 @@ var _TalkDetailsRow = require('./TalkDetailsRow');
 */
 
 var AgendaView = (function () {
-  function AgendaView(_ref) // contents of the agenda as JSON
-  // DOM node to render everything into
-  {
+  function AgendaView(_ref) {
     var _this = this;
 
     var c4p = _ref.c4p;
-    var // JSON for the C4P
-    agenda = _ref.agenda;
-    var element = _ref.element;
+    var agenda = _ref.agenda;
+    var element // DOM node to render everything into
+    = _ref.element;
 
     _classCallCheck(this, AgendaView);
 
@@ -415,7 +413,7 @@ var AgendaView = (function () {
       var dayId = !location.hash ? '' : /#([^\/]+)(\/.+)?/.exec(location.hash)[1];
       var talkHash = dayId && location.hash.substring(1);
       var html = (this.days.length > 1 ? this.renderDayTabs() : '<h2 class="kday-title">' + this.days[0].name + '</h2>') + this.renderWorkspace() + this.renderHint();
-      this.element.classList.add('kagenda');
+      this.element.classList.add('ka');
       this.element.innerHTML = html;
       document.body.addEventListener('click', this.onClick.bind(this));
       document.body.addEventListener('keyup', this.onKeyPress.bind(this));
@@ -432,26 +430,26 @@ var AgendaView = (function () {
         var id = _ref2.id;
         var name = _ref2.name;
 
-        return '\n        <li class="kagenda-tab-li">\n        <a class="kagenda-tab-a" data-day-id="' + id + '" href="#' + id + '">' + name + '</a>\n        </li>\n      ';
+        return '\n        <li class="ka-tab-li">\n        <a class="ka-tab-a" data-day-id="' + id + '" href="#' + id + '">' + name + '</a>\n        </li>\n      ';
       }).join('');
 
-      return '\n      <ul class="kagenda-tabs">\n      ' + tabLinks + '\n      </ul>\n    ';
+      return '\n      <ul class="ka-tabs">\n      ' + tabLinks + '\n      </ul>\n    ';
     }
   }, {
     key: 'renderWorkspace',
     value: function renderWorkspace() {
-      return '<div class="kworkspace"></div>';
+      return '<div class="kworkspace"></div><div class="ka-overlay ka-hidden"></div>';
     }
   }, {
     key: 'renderHint',
     value: function renderHint() {
-      return '\n      <div class="hint">\n        <a href="http://koliseo.com" target="_blank"><img src="https://www.koliseo.com/css/img/logo.svg" alt="Powered by Koliseo" class="kagenda-logo"></a>\n        <p class="hint-p">Using a keyboard? Try using the cursors to move between talks</p>\n        <p class="hint-p small">Handcrafted with ♥ at 30,000 feet of altitude, some point between Madrid and Berlin</p>\n      </div>\n    ';
+      return '\n      <div class="ka-hint">\n        <a href="http://koliseo.com" target="_blank"><img src="https://www.koliseo.com/css/img/logo.svg" alt="Powered by Koliseo" class="ka-logo"></a>\n        <p class="ka-hint-p">Using a keyboard? Try using the cursors to move between talks</p>\n        <p class="ka-hint-p small">Handcrafted with ♥ at 30,000 feet of altitude, some point between Madrid and Berlin</p>\n      </div>\n    ';
     }
+  }, {
+    key: 'selectDay',
 
     // Select a day from the agenda
     // dayId the identifier of this day. May include a hash
-  }, {
-    key: 'selectDay',
     value: function selectDay(dayId) {
       dayId = this.days.filter(function (day) {
         return day.id == dayId;
@@ -467,7 +465,7 @@ var AgendaView = (function () {
       }
 
       // mark selected tab
-      Array.prototype.forEach.call(this.element.querySelectorAll('.kagenda-tab-a'), function (a) {
+      Array.prototype.forEach.call(this.element.querySelectorAll('.ka-tab-a'), function (a) {
         a.classList.toggle('selected', a.getAttribute('data-day-id') === dayId);
       });
 
@@ -476,11 +474,11 @@ var AgendaView = (function () {
 
       this.pushState(dayTableModel.name, dayId);
     }
+  }, {
+    key: 'selectTalk',
 
     // render a talk as modal window, by hash
     // returns the talk if found, otherwise undefined
-  }, {
-    key: 'selectTalk',
     value: function selectTalk(hash, fadeInClass) {
       var talk = this.talksByHash[hash];
       if (talk) {
@@ -489,21 +487,20 @@ var AgendaView = (function () {
           this.unselectTalk();
         }
 
-        var $a = document.querySelector('.kagenda-talk-title[data-hash="' + hash + '"]');
-        var $cellContent = this.$cellContent = (0, _util.closest)($a, '.kagenda-table-td');
-        var $tr = this.rowForDetails($cellContent);
+        var $a = document.querySelector('.ka-talk-title[data-hash="' + hash + '"]');
+        var $cellContent = this.$cellContent = (0, _util.closest)($a, '.ka-table-td');
         var rect = $cellContent.getBoundingClientRect();
         var tableModel = this.getSelectedTableModel();
 
-        $cellContent.classList.add('selected');
         this.selectedTalkHash = hash;
         this.selectedTalkCoords = tableModel.getCoords(talk.id);
-        $tr.insertAdjacentHTML('afterEnd', new _TalkDetailsRow.TalkDetailsRow({
+
+        //$cellContent.classList.add('selected')
+        new _TalkDetailsPopup.TalkDetailsPopup({
           talk: talk.contents,
           tagColors: this.tagColors
-        }).render(tableModel.colLabels.length + 1));
+        }).render();
         this.pushState(talk.title, hash);
-        this.hideOverlappingCells($tr);
       }
       return talk;
     }
@@ -512,10 +509,10 @@ var AgendaView = (function () {
     value: function getSelectedTableModel() {
       return this.models[this.selectedDayId];
     }
-
-    // calculate the TR to insert a new row after. It depends on the value of rowspan
   }, {
     key: 'rowForDetails',
+
+    // calculate the TR to insert a new row after. It depends on the value of rowspan
     value: function rowForDetails($td) {
       var rowSpan = parseInt($td.getAttribute('rowSpan') || '1');
       var $tr = $td.parentElement;
@@ -524,26 +521,10 @@ var AgendaView = (function () {
       }
       return $tr;
     }
-
-    // hide any cell with a rowSpan that would overlap with the details cell
-  }, {
-    key: 'hideOverlappingCells',
-    value: function hideOverlappingCells($tr) {
-      var distance = 1;
-      while ($tr) {
-        Array.prototype.forEach.call($tr.children, function ($td) {
-          if ($td.rowSpan > distance) {
-            $td.classList.add('hidden');
-          }
-        });
-        $tr = $tr.previousElementSibling;
-        distance++;
-      }
-    }
-
-    // add the status to the location hash
   }, {
     key: 'pushState',
+
+    // add the status to the location hash
     value: function pushState(title, hash) {
       if (typeof history !== 'undefined' && history.pushState) {
         history.pushState({}, title, location.pathname + location.search + '#' + hash);
@@ -554,21 +535,17 @@ var AgendaView = (function () {
     value: function unselectTalk() {
       this.selectedTalkHash = undefined;
       this.selectedTalkCoords = undefined;
-      var $selected = document.querySelector('.kagenda-table-td.selected');
+      var $selected = document.querySelector('.ka-table-td.selected');
       $selected && $selected.classList.remove('selected');
-      var $details = document.querySelector('.kagenda-talk-details');
+      var $details = document.querySelector('.ka-talk-details');
       $details && $details.remove();
-
-      // display overlapping cells again
-      Array.prototype.forEach.call(document.querySelectorAll('.kagenda-table-td.hidden'), function ($td) {
-        return $td.classList.remove('hidden');
-      });
+      document.querySelector('.ka-overlay').classList.add('ka-hidden');
     }
   }, {
     key: 'scrollToTalk',
     value: function scrollToTalk(talk) {
       if (talk && talk.contents) {
-        var $element = document.querySelector('.kagenda-talk-title[data-id="' + talk.contents.id + '"]');
+        var $element = document.querySelector('.ka-talk-title[data-id="' + talk.contents.id + '"]');
         $element && $element.scrollIntoView(true);
       }
     }
@@ -577,7 +554,8 @@ var AgendaView = (function () {
     value: function onClick(event) {
       var target = event.target;
       if (target && event.button == 0 && !event.ctrlKey && !event.metaKey) {
-        if (target.classList.contains('kagenda-talk-title')) {
+        var classList = target.classList;
+        if (classList.contains('ka-talk-title')) {
           event.preventDefault();
           if ((0, _util.closest)(target, '.selected')) {
             this.unselectTalk();
@@ -585,9 +563,11 @@ var AgendaView = (function () {
             var hash = target.getAttribute('href').substring(1);
             var talk = this.selectTalk(hash);
           }
-        } else if (target.classList.contains('kagenda-tab-a')) {
+        } else if (classList.contains('ka-tab-a')) {
           event.preventDefault();
           this.selectDay(target.getAttribute('data-day-id'));
+        } else if (classList.contains('ka-close') || classList.contains('ka-overlay')) {
+          this.unselectTalk();
         }
       }
     }
@@ -625,8 +605,10 @@ var AgendaView = (function () {
 ;
 
 exports.AgendaView = AgendaView;
+// JSON for the C4P
+// contents of the agenda as JSON
 
-},{"./AgendaDayTableModel":1,"./AgendaDayTemplate":2,"./TalkDetailsRow":4,"./util":7}],4:[function(require,module,exports){
+},{"./AgendaDayTableModel":1,"./AgendaDayTemplate":2,"./TalkDetailsPopup":4,"./util":7}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -639,22 +621,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var _stringutils = require('./stringutils');
 
-var TalkDetailsRow = (function () {
-  function TalkDetailsRow(_ref) {
+var _util = require('./util');
+
+var TalkDetailsPopup = (function () {
+  function TalkDetailsPopup(_ref) {
     var talk = _ref.talk;
     var tagColors = _ref.tagColors;
 
-    _classCallCheck(this, TalkDetailsRow);
+    _classCallCheck(this, TalkDetailsPopup);
 
     this.talk = talk;
     this.tagColors = tagColors;
   }
 
-  _createClass(TalkDetailsRow, [{
+  _createClass(TalkDetailsPopup, [{
     key: 'render',
-    value: function render(columns) {
+    value: function render() {
+
       var talk = this.talk;
-      return '\n      <tr class="kagenda-talk-details">\n        <td class="kagenda-talk-details-td" colspan="' + columns + '">\n          <div class="kagenda-talk-details-td-inner">\n            <div class="kagenda-talk-details-contents">\n              <h2 class="kagenda-talk-details-title">' + talk.title + '</h2>\n              <div class="kagenda-talk-details-description">' + (0, _stringutils.formatMarkdown)(talk.description) + '</div>\n              ' + this.renderTags(talk.tags) + '\n            </div>\n            <ul class="kagenda-avatars">\n              ' + talk.authors.map(this.renderAuthor).join('') + '\n            </ul>\n          </div>\n        </td>\n      </tr>\n    ';
+      var html = '\n      <div class="ka-talk-details">\n        <div class="ka-talk-details-inner">\n          <a class="ka-close" title="close">X</a>\n          <div class="ka-talk-details-contents">\n            <h2 class="ka-talk-details-title">' + talk.title + '</h2>\n            <div class="ka-talk-details-description">' + (0, _stringutils.formatMarkdown)(talk.description) + '</div>\n            ' + this.renderTags(talk.tags) + '\n          </div>\n          <ul class="ka-avatars">\n            ' + talk.authors.map(this.renderAuthor).join('') + '\n          </ul>\n        </div>\n      </div>\n    ';
+      document.body.insertAdjacentHTML('beforeend', html);
+      document.querySelector('.ka-overlay').classList.remove('ka-hidden');
     }
   }, {
     key: 'renderTags',
@@ -665,7 +652,7 @@ var TalkDetailsRow = (function () {
       if (!tags) {
         return '';
       }
-      return '<div class="kagenda-tags">' + Object.keys(tags).map(function (category) {
+      return '<div class="ka-tags">' + Object.keys(tags).map(function (category) {
         return tags[category].map(function (tag) {
           return '<span class="tag tag' + _this.tagColors[category] + '">' + tag + '</span>';
         }).join(' ');
@@ -680,18 +667,18 @@ var TalkDetailsRow = (function () {
       var avatar = _ref2.avatar;
       var description = _ref2.description;
 
-      return '\n      <li class="kagenda-avatar-li kagenda-avatar-and-text">\n        <a href="https://www.koliseo.com/' + uuid + '" class="avatar">\n        <img class="kagenda-avatar" src="' + avatar + '">\n        </a>\n        <div class="kagenda-author-data">\n          <a class="kagenda-author-name" href="https://www.koliseo.com/' + uuid + '">' + name + '</a>\n          <div class="kagenda-author-description">' + (0, _stringutils.formatMarkdown)(description) + '</div>\n        </div>\n      </li>\n    ';
+      return '\n      <li class="ka-avatar-li ka-avatar-and-text">\n        <a href="https://www.koliseo.com/' + uuid + '" class="avatar">\n        <img class="ka-avatar" src="' + avatar + '">\n        </a>\n        <div class="ka-author-data">\n          <a class="ka-author-name" href="https://www.koliseo.com/' + uuid + '">' + name + '</a>\n          <div class="ka-author-description">' + (0, _stringutils.formatMarkdown)(description) + '</div>\n        </div>\n      </li>\n    ';
     }
   }]);
 
-  return TalkDetailsRow;
+  return TalkDetailsPopup;
 })();
 
 ;
 
-exports.TalkDetailsRow = TalkDetailsRow;
+exports.TalkDetailsPopup = TalkDetailsPopup;
 
-},{"./stringutils":6}],5:[function(require,module,exports){
+},{"./stringutils":6,"./util":7}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -710,13 +697,11 @@ Koliseo.agenda = {};
   Renders an agenda.
 
 */
-Koliseo.agenda.render = function (_ref) // {String} URL to retrieve the list of talks
-// {String} The element to use to render the agenda
-{
+Koliseo.agenda.render = function (_ref) {
   var c4pUrl = _ref.c4pUrl;
-  var // {String} URL to retrieve the C4P
-  agendaUrl = _ref.agendaUrl;
-  var element = _ref.element;
+  var agendaUrl = _ref.agendaUrl;
+  var element // {String} The element to use to render the agenda
+  = _ref.element;
 
   // todo: add error handling
   // todo: add proper argument assertions
@@ -755,6 +740,8 @@ Koliseo.agenda.render = function (_ref) // {String} URL to retrieve the list of 
 };
 exports['default'] = Koliseo.agenda;
 module.exports = exports['default'];
+// {String} URL to retrieve the C4P
+// {String} URL to retrieve the list of talks
 
 },{"./AgendaView":3}],6:[function(require,module,exports){
 'use strict';
@@ -767,7 +754,7 @@ var entityMap = {
   '<': '&lt;',
   '>': '&gt;',
   '"': '&quot;',
-  "'": '&#x27;'
+  '\'': '&#x27;'
 },
     escapeRegEx = new RegExp('[' + Object.keys(entityMap).join('') + ']', 'g');
 
@@ -823,19 +810,19 @@ var entityMap = {
   "&": "&amp;",
   "<": "&lt;",
   ">": "&gt;",
-  '"': '&quot;',
-  "'": '&#39;',
-  "/": '&#x2F;'
+  "\"": "&quot;",
+  "'": "&#39;",
+  "/": "&#x2F;"
 };
 
 function transitionClassFunc() {
-  var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+  var _ref = arguments[0] === undefined ? {} : arguments[0];
 
   var _ref$removeClass = _ref.removeClass;
   var removeClass = _ref$removeClass === undefined ? false : _ref$removeClass;
 
   return function (el) {
-    var className = arguments.length <= 1 || arguments[1] === undefined ? 'active' : arguments[1];
+    var className = arguments[1] === undefined ? "active" : arguments[1];
 
     if (removeClass) {
       if (!el.classList.contains(className)) return Promise.resolve();
@@ -846,15 +833,15 @@ function transitionClassFunc() {
     return new Promise(function (resolve) {
       var listener = function listener(event) {
         if (event.target != el) return;
-        el.removeEventListener('webkitTransitionEnd', listener);
-        el.removeEventListener('transitionend', listener);
+        el.removeEventListener("webkitTransitionEnd", listener);
+        el.removeEventListener("transitionend", listener);
         resolve();
       };
 
-      el.addEventListener('webkitTransitionEnd', listener);
-      el.addEventListener('transitionend', listener);
+      el.addEventListener("webkitTransitionEnd", listener);
+      el.addEventListener("transitionend", listener);
       requestAnimationFrame(function (_) {
-        el.classList[removeClass ? 'remove' : 'add'](className);
+        el.classList[removeClass ? "remove" : "add"](className);
       });
     });
   };
@@ -868,7 +855,7 @@ exports["default"] = {
 
   // transform a string into a single element
   strToEl: (function () {
-    var tmpEl = document.createElement('div');
+    var tmpEl = document.createElement("div");
     return function (str) {
       var r;
       tmpEl.innerHTML = str;
@@ -893,8 +880,8 @@ exports["default"] = {
 
     values = values.map(exports.escapeHtml);
     return strings.reduce(function (str, val, i) {
-      return str += val + (values[i] || '');
-    }, '');
+      return str += val + (values[i] || "");
+    }, "");
   },
 
   closest: function closest(el, selector) {
@@ -2238,7 +2225,7 @@ var objToString = objectProto.toString;
 function isFunction(value) {
   // The use of `Object#toString` avoids issues with the `typeof` operator
   // in older versions of Chrome and Safari which return 'function' for regexes
-  // and Safari 8 which returns 'object' for typed array constructors.
+  // and Safari 8 equivalents which return 'object' for typed array constructors.
   return isObject(value) && objToString.call(value) == funcTag;
 }
 
