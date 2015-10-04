@@ -2,30 +2,21 @@
 set -e
 
 gulp dist
+jekyll build
 
-DIR='.upload'
-
-mkdir -p $DIR
-cd $DIR
-
-git init
-git remote add origin git@github.com:icoloma/web-codemotion.git
-git remote update
-git checkout -b gh-pages origin/gh-pages 
-
-rm -r *
-cp -r ../dist/* .
-
-git add --all .
-if [ -z "$1" ]; then
-  MESSAGE="Site updated at $(date +'%d-%m-%Y')"
+git show-ref --verify --quiet refs/heads/gh-pages
+if [ $? !== 0 ]; then
+	git checkout -b gh-pages origin/gh-pages 
 else
-  MESSAGE="$1"
+	git checkout gh-pages
 fi
+
+git pull
+git merge master
 git commit -m "$MESSAGE"
 git push
 
-cd ..
+git checkout master
 
 echo "Successfully uploaded" 
 google-chrome http://codemotion.es
