@@ -2,16 +2,12 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100%;
-  position: relative;
-  padding-top: 15px;
+  padding: 15px 0;
+  overflow: hidden;
 
   &.small {
     background-color: $black;
     padding-top: 10px;
-    height: auto;
-    padding-bottom: 15px;
-    position: fixed;
     width: 100%;
     z-index: 99;
     .top-bar-section {
@@ -120,8 +116,8 @@
 
 .top-section-title {
   color: $top-section-color;
-  position: absolute;
-  top: 35%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   a {
     font-size: 15px;
   }
