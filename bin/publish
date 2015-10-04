@@ -2,6 +2,8 @@
 set -e
 
 gulp dist
+jekyll build
+
 git checkout -b gh-pages origin/gh-pages 
 git pull
 git merge master
