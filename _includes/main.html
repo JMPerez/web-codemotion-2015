@@ -1,12 +1,14 @@
 <!-- Begin Main Section -->
 <section id="top-section" class="top-section no-padding" style="background-image: url('/img/{{ site.mainImage }}');">
     {% include navigation.html %}
-    <div class="text-center top-section-title columns">
-        <h1>{{ site[page.hl].mainTitle }}</h1>
-        <p>{{ site[page.hl].mainSubtitle }}</p>
-        {% for button in site.mainButtons %}
-        <a href="{% if button.permalink != null %} {{ button.permalink | prepend: site.baseurl }} {% else %} {{ button.link }} {% endif %}" class="button radius uppercase {{button.class}}" {% if button.link != null %}target="_blank"{% endif %}>{{ site[page.hl][button.i18n] }}</a>
-        {% endfor %}
+    <div class="row">
+        <div class="text-center top-section-title columns">
+            <h1>{{ site[page.hl].mainTitle }}</h1>
+            <p>{{ site[page.hl].mainSubtitle }}</p>
+            {% for button in site.mainButtons %}
+            <a href="{% if button.permalink != null %} {{ button.permalink | prepend: site.baseurl }} {% else %} {{ button.link }} {% endif %}" class="button radius uppercase {{button.class}}" {% if button.link != null %}target="_blank"{% endif %}>{{ site[page.hl][button.i18n] }}</a>
+            {% endfor %}
+        </div>
     </div>
     <a href="#about" class="explore columns text-center">
         <span class="arrow icon-down-open"></span>
