@@ -70,7 +70,7 @@ en:
   AgendaCallToActionTitle: 'Are you going to miss this?'
   AgendaCallToActionDesc: 'Ask your boss to save two days to discover what everyone else is up to, get a bit crazy, and surely step out of your comfort zone.'
   NHDiscount: >
-              <p>NH Ciudad de la Imagen Hotel offers our attendees a special price on 35 double and single rooms:
+              <p><a href="http://www.nh-hoteles.es/hotel/nh-pozuelo-ciudad-de-la-imagen?nhagentid=10165&nhsubagentid=101650000000&oodc=26_99956&source=adwords&gclid=CLi556qXpMgCFQb4wgodUUkHpA&dclid=CL-xh6uXpMgCFcWeGwodPQMPZw" target="_blank">NH Ciudad de la Imagen Hotel</a> offers our attendees a special price on 35 double and single rooms:
               <ul><li>Double room (breakfast included) 63,00€ + 10% IVA per night</li>
               <li>Single room (breakfast included) 54,00€ + 10% IVA per night</li></ul>
               <p>Please call or send them an email indicating the reference number 7619617, or just CODEMOTION.
@@ -80,6 +80,14 @@ en:
               <br/>NH Ciudad de la Imagen
               <br/>C/ Luis Buñuel 1, Ciudad de la Imagen | 28223 Pozuelo de Alarcón. Madrid | SPAIN 
               <br/>T. <a href="tel:%2B34%2091%207110222">+34 91 7110222</a> | <a href="mailto:nhciudadimagen@nh-hotels.com">nhciudadimagen@nh-hotels.com</a> | <a href="www.nh-hotels.com" target="_blank">www.nh-hotels.com</a></p>
+  EuroStarDiscount: >
+                    <p><a href="http://www.eurostarsihotel.com/" target="_blank">Eurostars i-Hotel</a> offers us 50 rooms at a very special price:
+                    <ul><li>Double room for single use: 65,00€ per night, VAT included</li>
+                    <li>Double room for single use + breakfast: 71,00€ per night, VAT included</li>
+                    <li>Double room: 65,00€ per night, VAT included</li>
+                    <li>Double room + breakfast: 77,00€ per night, VAT included</li></ul>
+                    <p>You can book at this special price until the 10th of November and you must specify that you are CODEMOTION attendees. Please, call at <a href="tel:%28%2B34%29%2091%20272%2030%2060">(+34) 91 272 30 60</a> or send an email to <a href="mailto:reservas@eurostarsihotel.com">reservas@eurostarsihotel.com</a>.
+                    <p>The hotel is very close to the venue, you will take only a few stops by Metro Ligero (line ML3) to get to Codemotion. 
 
 es:
   title: "Codemotion Spain - For the communities, by the communities"
@@ -141,7 +149,7 @@ es:
   AgendaCallToActionTitle: '¿Te lo vas a perder?'
   AgendaCallToActionDesc: 'Pide a tu jefe dos días para descubrir en qué trabaja todo el mundo, volverte un poco loco, y seguramente salirte de tu zona de confort.'
   NHDiscount: >
-              <p>El hotel NH Ciudad de la Imagen nos reserva unas 35 habitaciones entre dobles y singles a un precio reducido:
+              <p>El hotel <a href="http://www.nh-hoteles.es/hotel/nh-pozuelo-ciudad-de-la-imagen?nhagentid=10165&nhsubagentid=101650000000&oodc=26_99956&source=adwords&gclid=CLi556qXpMgCFQb4wgodUUkHpA&dclid=CL-xh6uXpMgCFcWeGwodPQMPZw" target="_blank">NH Ciudad de la Imagen</a> nos reserva unas 35 habitaciones entre dobles y singles a un precio reducido:
               <ul><li>Hab. doble por noche con desayuno buffet incluido 63,00€ + 10% IVA</li>
               <li>Hab. single por noche con desayuno buffet incluido 54,00€ + 10% IVA</li></ul>
               <p>Los clientes tienen que llamar o enviar un email haciendo referencia al número 7619617, o bien indicando el nombre de CODEMOTION.
@@ -151,6 +159,14 @@ es:
               <br/>NH Ciudad de la Imagen
               <br/>C/ Luis Buñuel 1, Ciudad de la Imagen | 28223 Pozuelo de Alarcón. Madrid | SPAIN 
               <br/>T. <a href="tel:%2B34%2091%207110222">+34 91 7110222</a> | <a href="mailto:nhciudadimagen@nh-hotels.com">nhciudadimagen@nh-hotels.com</a> | <a href="www.nh-hotels.com" target="_blank">www.nh-hotels.com</a></p>
+  EuroStarDiscount: >
+                    <p><a href="http://www.eurostarsihotel.com/" target="_blank">Eurostars i-Hotel</a> nos ofrece 50 habitaciones a precio especial:
+                    <ul><li>Habitación Doble Uso Individual, sólo alojamiento: 65,00€, IVA incluido</li>
+                    <li>Habitación Doble Uso Individual, alojamiento y desayuno: 71,00€, IVA incluido</li>
+                    <li>Habitación Doble, sólo alojamiento: 65,00€, IVA incluido</li>
+                    <li>Habitación Doble, alojamiento y desayuno: 77,00€, IVA incluido</li></ul>
+                    <p>Podéis reservarlas hasta el 10 de noviembre indicando que sois asistentes de CODEMOTION para aprovechar las tarifas especiales. Para reservar, podéis dirigiros al teléfono <a href="tel:%28%2B34%29%2091%20272%2030%2060">(+34) 91 272 30 60</a> o a la dirección <a href="mailto:reservas@eurostarsihotel.com">reservas@eurostarsihotel.com</a>.
+                    <p>El hotel queda en Ciudad de la Imagen, a escasas paradas en metro ligero (ML3) del recinto. 
 
 
 email: "info@codemotion.es"
