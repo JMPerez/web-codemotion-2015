@@ -1,0 +1,8 @@
+.agenda-container {
+	margin: 0 20px;
+}
+@media #{$large-up} {
+	.agenda-container {
+		margin: 0 40px;
+	}
+}
