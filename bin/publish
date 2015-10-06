@@ -12,8 +12,8 @@ else
 fi
 
 git pull
-git merge master
-git commit -m "$MESSAGE"
+git merge master -m "merged master"
+git commit -m "merged master"
 git push
 
 git checkout master
