@@ -3,7 +3,6 @@
   background-position: center;
   background-repeat: no-repeat;
   padding: 15px 0;
-  overflow: hidden;
 
   &.small {
     background-color: $black;
@@ -21,7 +20,7 @@
       }
     }
     + section {
-      padding-top: 100px;
+      padding-top: 50px;
     }
   }
 
