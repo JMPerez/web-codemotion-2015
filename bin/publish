@@ -5,7 +5,7 @@ gulp dist
 jekyll build
 
 git show-ref --verify --quiet refs/heads/gh-pages
-if [ $? !== 0 ]; then
+if [ $? != 0 ]; then
 	git checkout -b gh-pages origin/gh-pages 
 else
 	git checkout gh-pages
