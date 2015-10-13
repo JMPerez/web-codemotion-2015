@@ -443,7 +443,7 @@ var AgendaView = (function () {
   }, {
     key: 'renderHint',
     value: function renderHint() {
-      return '\n      <div class="ka-hint">\n        <a href="http://koliseo.com" target="_blank"><img src="https://www.koliseo.com/css/img/logo.svg" alt="Powered by Koliseo" class="ka-logo"></a>\n        <p class="ka-hint-p">Using a keyboard? Try using the cursors to move between talks</p>\n        <p class="ka-hint-p small">Handcrafted with ♥ at 30,000 feet of altitude, some point between Madrid and Berlin</p>\n      </div>\n    ';
+      return '\n      <div class="ka-hint">\n        <a href="http://koliseo.com" target="_blank" class="ka-logo"></a>\n        <p class="ka-hint-p">Using a keyboard? Try using the cursors to move between talks</p>\n        <p class="ka-hint-p small">Handcrafted with ♥ at 30,000 feet of altitude, some point between Madrid and Berlin</p>\n      </div>\n    ';
     }
   }, {
     key: 'selectDay',
@@ -537,7 +537,7 @@ var AgendaView = (function () {
       this.selectedTalkCoords = undefined;
       var $selected = document.querySelector('.ka-table-td.selected');
       $selected && $selected.classList.remove('selected');
-      var $details = document.querySelector('.ka-talk-details');
+      var $details = document.querySelector('.ka-talk-details-window');
       $details && $details.parentNode.removeChild($details);
       document.querySelector('.ka-overlay').classList.add('ka-hidden');
     }
@@ -639,7 +639,7 @@ var TalkDetailsPopup = (function () {
     value: function render() {
 
       var talk = this.talk;
-      var html = '\n      <div class="ka-talk-details">\n        <div class="ka-talk-details-inner">\n          <a class="ka-close" title="close">X</a>\n          <div class="ka-talk-details-contents">\n            <h2 class="ka-talk-details-title">' + talk.title + '</h2>\n            <div class="ka-talk-details-description">' + (0, _stringutils.formatMarkdown)(talk.description) + '</div>\n            ' + this.renderTags(talk.tags) + '\n          </div>\n          <ul class="ka-avatars">\n            ' + talk.authors.map(this.renderAuthor).join('') + '\n          </ul>\n        </div>\n      </div>\n    ';
+      var html = '\n      <div class="ka-talk-details-window">\n        <a class="ka-close" title="close"></a>\n        <div class="ka-talk-details-viewport">\n          <div class="ka-talk-details-inner">\n            <div class="ka-talk-details-contents">\n              <h2 class="ka-talk-details-title">' + talk.title + '</h2>\n              <div class="ka-talk-details-description">' + (0, _stringutils.formatMarkdown)(talk.description) + '</div>\n              ' + this.renderTags(talk.tags) + '\n            </div>\n            <ul class="ka-avatars">\n              ' + talk.authors.map(this.renderAuthor).join('') + '\n            </ul>\n          </div>\n        </div>\n      </div>\n    ';
       document.body.insertAdjacentHTML('beforeend', html);
       document.querySelector('.ka-overlay').classList.remove('ka-hidden');
     }
@@ -667,7 +667,7 @@ var TalkDetailsPopup = (function () {
       var avatar = _ref2.avatar;
       var description = _ref2.description;
 
-      return '\n      <li class="ka-avatar-li ka-avatar-and-text">\n        <a href="https://www.koliseo.com/' + uuid + '" class="avatar">\n        <img class="ka-avatar" src="' + avatar + '">\n        </a>\n        <div class="ka-author-data">\n          <a class="ka-author-name" href="https://www.koliseo.com/' + uuid + '">' + name + '</a>\n          <div class="ka-author-description">' + (0, _stringutils.formatMarkdown)(description) + '</div>\n        </div>\n      </li>\n    ';
+      return '\n      <li class="ka-avatar-li ka-avatar-and-text">\n        <a href="https://www.koliseo.com/' + uuid + '" class="ka-avatar-container">\n          <span style="display:table-row">\n            <img class="ka-avatar-img" src="' + avatar + '">\n            <span class="ka-author-name">' + name + '</a>\n          </span>\n        </a>\n        <div class="ka-author-data">\n          <div class="ka-author-description">' + (0, _stringutils.formatMarkdown)(description) + '</div>\n        </div>\n      </li>\n    ';
     }
   }]);
 

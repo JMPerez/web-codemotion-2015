@@ -88,6 +88,17 @@
         "Foundation": false, 
         "jQuery": false,
         "exports": false,
-        "module": false
+        "module": false,
+        "google": false,
+        "googleMaps": false,
+
+        // todo: all these could be moved from default.html to scripts.js
+        "mobileCenterMapCoordinates": false,
+        "eventPlaceCoordinates": false,
+        "eventPlace": false,
+        "icon": false,
+        "centerMap": false,
+        "mobileCenterMap": false
+
     }
 }
