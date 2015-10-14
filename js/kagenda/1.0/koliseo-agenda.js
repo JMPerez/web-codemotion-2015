@@ -466,7 +466,8 @@ var AgendaView = (function () {
 
       // mark selected tab
       Array.prototype.forEach.call(this.element.querySelectorAll('.ka-tab-a'), function (a) {
-        a.classList.toggle('selected', a.getAttribute('data-day-id') === dayId);
+        // .toggle(className, value) does not work in IE 10
+        a.classList[a.getAttribute('data-day-id') === dayId ? 'add' : 'remove']('selected');
       });
 
       // render table
