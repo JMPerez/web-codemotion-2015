@@ -1,24 +1,29 @@
 #!/bin/bash
+# Merge master from origin into gh-pages
+# Optional argument $1: the commit message
+
 set -e
 
 git pull
 gulp dist
 jekyll build
 
-git show-ref --verify --quiet refs/heads/gh-pages
-if [ $? != 0 ]; then
-	git checkout -b gh-pages origin/gh-pages 
+FOLDER=.gh-pages
+
+if [ ! -d ${FOLDER} ]; then
+  git clone -b gh-pages git@github.com:ccoloma/web-codemotion-2015 ${FOLDER}
 else
-	git checkout gh-pages
+  cd ${FOLDER}
+  git pull
+  cd ..
 fi
 
-git pull
-git merge master -m "merged master"
-git commit -m "merged master"
+cd ${FOLDER}
+git merge origin/master -m "Merge master"
+git commit -m "${1:-Merge master}"
 git push
 
-git checkout master
-
+cd ..
 echo "Successfully uploaded" 
-google-chrome http://codemotion.es
+xdg-open http://codemotion.es &
                                    

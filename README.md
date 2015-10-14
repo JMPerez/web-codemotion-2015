@@ -25,5 +25,12 @@ apt-get install ruby1.9.1-dev
 gem install jekyll
 ```
 
+## When you are done tinkering
+
+```
+git push
+bin/publish
+```
+
 ## License
 This project is published under the MIT license
