@@ -539,7 +539,10 @@ var AgendaView = (function () {
       var $selected = document.querySelector('.ka-table-td.selected');
       $selected && $selected.classList.remove('selected');
       var $details = document.querySelector('.ka-talk-details-window');
-      $details && $details.parentNode.removeChild($details);
+      if ($details) {
+        $details.parentNode.removeChild($details);
+        this.pushState(this.models[this.selectedDayId].name, this.selectedDayId);
+      }
       document.querySelector('.ka-overlay').classList.add('ka-hidden');
     }
   }, {
@@ -890,7 +893,7 @@ exports["default"] = {
       return el.closest(selector);
     }
 
-    var matches = el.matches || el.msMatchesSelector;
+    var matches = el.matches || el.msMatchesSelector || el.webkitMatchesSelector;
 
     do {
       if (el.nodeType != 1) continue;
