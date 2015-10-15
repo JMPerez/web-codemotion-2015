@@ -52,7 +52,7 @@ fi
 
 cd ${FOLDER}
 git merge origin/master -m "Merge master"
-git commit -m "${1:-Merge master}"
+# git commit -m "${1:-Merge master}"
 git push
 
 cd ..
